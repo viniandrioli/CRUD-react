@@ -31,7 +31,7 @@ class Table extends Component {
   }
 
   addModal = () => {
-    this.setState({showModal: true, addUser: true});
+    this.setState({showModal: true, addUser: true, description: '', status: ''});
   }
 
   editModal = (items) => {

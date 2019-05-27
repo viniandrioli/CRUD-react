@@ -41,7 +41,7 @@ componentWillMount() {
 
   submitModalEdit (e) {
       e.preventDefault();
-      const task = [{ description: this.state.description, done: this.state.status }];    
+      const task = [{ description: this.state.description, done: this.state.status }];  
       this.tasklistService.editTask(task[0], this.props.taskId)
       .then(response => {
         this.props.showModal(false, true)
@@ -66,7 +66,7 @@ componentWillMount() {
         <div className="overlay"></div>
         <div className="modal_content">
           <form>
-            <label>Title</label>
+            <label>Description</label>
             <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
             <div className="checkboxes">
             <label htmlFor="check">
